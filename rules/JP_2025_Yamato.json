@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "region": "JP",
+    "locale": "Kanagawa/Yamato",
+    "version": "2025-09-28",
+    "currency": "JPY"
+  },
+  "defaults": {
+    "multiple_birth": true,
+    "gestation_days": 280,
+    "father_leave_days": 365,
+    "father_leave_start_offset_days": 1
+  },
+  "contacts": {
+    "health_insurance": {
+      "type": "健康保険組合",
+      "name": "協会けんぽ神奈川支部",
+      "address": "〒220-8538 神奈川県横浜市西区みなとみらい3-6-1",
+      "phone": "0570-004-401",
+      "preferred_method": "郵送"
+    },
+    "hello_work": {
+      "type": "ハローワーク",
+      "name": "ハローワーク大和",
+      "address": "神奈川県大和市深見西3-3-21",
+      "phone": "046-260-8609",
+      "preferred_method": "窓口"
+    },
+    "city_office": {
+      "type": "自治体",
+      "name": "大和市 すくすく子育て課",
+      "address": "神奈川県大和市鶴間1-31-7",
+      "phone": "046-260-5608",
+      "preferred_method": "窓口"
+    },
+    "hospital": {
+      "type": "医療機関",
+      "name": "北里大学病院 産科",
+      "address": "神奈川県相模原市南区北里1-15-1",
+      "phone": "042-778-8111",
+      "preferred_method": "窓口"
+    }
+  },
+  "documents": {
+    "sickness_allowance": [
+      "傷病手当金支給申請書",
+      "医師意見書",
+      "事業主証明"
+    ],
+    "maternity_allowance": [
+      "出産手当金支給申請書",
+      "事業主証明",
+      "母子健康手帳"
+    ],
+    "childbirth_lump_sum": [
+      "直接支払制度同意書",
+      "健康保険証",
+      "医療機関請求書"
+    ],
+    "childcare_leave": [
+      "育児休業給付金支給申請書",
+      "雇用保険被保険者証",
+      "賃金台帳"
+    ],
+    "post_birth_support": [
+      "出生後休業支援給付金申請書",
+      "出生証明書",
+      "雇用保険被保険者証"
+    ],
+    "child_allowance": [
+      "児童手当認定請求書",
+      "健康保険証",
+      "口座確認書類"
+    ],
+    "child_medical": [
+      "乳幼児医療費助成申請書",
+      "健康保険証",
+      "マイナンバーカード"
+    ]
+  },
+  "urls": {
+    "sickness_allowance": "https://www.kyoukaikenpo.or.jp/~/media/Files/hoken/shikaku/kyufu/kyoukaikenpo/syobyo_shinsei.pdf",
+    "maternity_allowance": "https://www.kyoukaikenpo.or.jp/g3/cat320/sb3030/r150/",
+    "childbirth_lump_sum": "https://www.kyoukaikenpo.or.jp/g5/cat520/r161/",
+    "childcare_leave": "https://www.mhlw.go.jp/bunya/koyoukintou/ikuji_koyou/",
+    "post_birth_support": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000213009.html",
+    "child_allowance": "https://www.city.yamato.lg.jp/soshiki/kodomoseishonenbu/kosodateshienka/",
+    "child_medical": "https://www.city.yamato.lg.jp/soshiki/kenkofukushibu/iryo_fukushi/"
+  },
+  "allowances": {
+    "sickness": {
+      "rate": 0.6667,
+      "waiting_days": 3,
+      "max_default_days": 90,
+      "calculation_basis": "standard_daily = monthly_salary / 30",
+      "default_start": "2025-10-13",
+      "default_duration_days": 90
+    },
+    "maternity": {
+      "prenatal_days": 98,
+      "postnatal_days": 56,
+      "rate": 0.6667
+    },
+    "childbirth_lump_sum": {
+      "amount_per_child": 500000,
+      "multiple_birth_multiplier": 2
+    },
+    "childcare": {
+      "phase1_days": 180,
+      "phase1_rate": 0.67,
+      "phase2_rate": 0.5,
+      "payout_window_months": 2
+    },
+    "post_birth_support": {
+      "duration_days": 28,
+      "extra_rate": 0.13,
+      "mother_window_weeks": 16,
+      "father_window_weeks": 8
+    },
+    "child_allowance": {
+      "amount_per_child": 15000,
+      "payment_months": [
+        6,
+        10,
+        2
+      ]
+    },
+    "child_medical_subsidy": {
+      "copay": 0,
+      "note": "申請後は自己負担0円の前提"
+    }
+  },
+  "status_options": [
+    "未着手",
+    "準備中",
+    "申請中",
+    "差戻し",
+    "決定",
+    "入金済"
+  ],
+  "submission_methods": [
+    "窓口",
+    "郵送",
+    "オンライン"
+  ],
+  "output_columns": [
+    "年/月",
+    "種別",
+    "金額(円)",
+    "制度カテゴリ",
+    "対象者",
+    "期間開始",
+    "期間終了",
+    "申請開始可能日",
+    "申請期限",
+    "提出先(種別)",
+    "提出先(名称)",
+    "提出方法",
+    "必要書類",
+    "支給率(%)",
+    "対象日数",
+    "支給単位(開始)",
+    "支給単位(終了)",
+    "振込予定日",
+    "実入金日",
+    "実入金額(円)",
+    "ステータス",
+    "差戻し理由",
+    "問い合わせ先",
+    "根拠URL"
+  ]
+}
